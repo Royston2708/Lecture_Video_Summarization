@@ -10,4 +10,9 @@ This code was used to build a baseline model that computed document embeddings f
 - Extractive Summarization with BERT: 
 This code used fine-tuned BERT embeddings to attain bi-directional contextual embeddings. BERT by default provides sentence embeddings as well as the contextual word embeddings for every word in the sequence. Hence using the sentence embeddings I computed 2-3 clusters within the sentences (Clusters can be experimented with I settled on 3 clusters taking 1 sentence for each cluster) and computed the centroid of the cluster. I then found the sentence embedding that is closest to the cluster and used it as a sentence in the summary. As the final summary was to have 3 sentences I used 3 clusters but also experimented with 2 clusters and 2 sentences per cluster. 
 
-- Abstractive Summarization
+- Abstractive Summarization:
+Used PEGASUS and BART based models to generate summaries for lecture video transcripts. 
+
+# Future Work: 
+- Currently Working on building a dataset with target/gold sumamries for lecture videos in order to fine tune PEGASUS and BART models on domain specific lecture video data. Will open the dataset for public use via kaggle and/or write a paper for the same to facilitate future work on scientific document/content summarization.
+- Potential to work on note taking and descriptive summarization of lecture videos to learn how students takes notes.
